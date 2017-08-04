@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
+               selector: 'app-root',
+               template: `
+                   <runtime-host [dataUrl]="dataUrl"></runtime-host>`
+           })
 export class AppComponent {
-  title = 'app';
+    dataUrl = 'assets/data.json';
 }

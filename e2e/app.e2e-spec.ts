@@ -1,14 +1,24 @@
-import { NgRuntimeDemoPage } from './app.po';
+import {NgRuntimeDemoPage} from './app.po';
 
-describe('ng-runtime-demo App', () => {
-  let page: NgRuntimeDemoPage;
-
-  beforeEach(() => {
-    page = new NgRuntimeDemoPage();
-  });
-
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
-  });
-});
+describe('NgRuntimeDemo App',
+         () => {
+             let page: NgRuntimeDemoPage;
+    
+             beforeEach(() => {
+                 page = new NgRuntimeDemoPage();
+             });
+    
+             it('should display "Enter value:" as div text',
+                () => {
+                    page.navigateTo();
+                    expect(page.getDivText())
+                        .toEqual('Enter value:');
+                });
+    
+             it('should display "test" as input value',
+                () => {
+                    page.navigateTo();
+                    expect(page.getInputValue())
+                        .toEqual('test');
+                });
+         });
